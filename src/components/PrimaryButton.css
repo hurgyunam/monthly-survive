@@ -1,0 +1,30 @@
+.primary-button {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-button);
+  font-weight: var(--font-button-weight);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.primary-button:enabled {
+  background-color: var(--accent);
+}
+
+.primary-button:enabled:hover,
+.primary-button:enabled:active {
+  background-color: var(--accent-hover);
+}
+
+.primary-button:disabled {
+  background-color: #4A4A4A;
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.6);
+}

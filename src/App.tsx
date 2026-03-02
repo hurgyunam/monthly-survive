@@ -1,14 +1,20 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { GameProvider } from './context/GameContext';
+import { SetupScreen, SimulationScreen, ResultScreen } from './screens';
+
 function App() {
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1>Monthly Survive</h1>
-      </header>
-      <main className="app-main">
-        <p>환영합니다! 모바일 UI로 개발 준비가 완료되었습니다.</p>
-      </main>
-    </div>
-  )
+    <GameProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SetupScreen />} />
+          <Route path="/sim" element={<SimulationScreen />} />
+          <Route path="/result" element={<ResultScreen />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </GameProvider>
+  );
 }
 
-export default App
+export default App;

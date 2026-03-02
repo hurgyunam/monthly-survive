@@ -1,0 +1,32 @@
+.setup-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.setup-title {
+  font-size: var(--font-title);
+  font-weight: var(--font-title-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.question-block {
+  margin: 0;
+}
+
+.question-text {
+  font-size: var(--font-section);
+  font-weight: var(--font-section-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.setup-spacer {
+  flex-shrink: 0;
+}
+
+.setup-spacer--flex {
+  flex: 1;
+  min-height: 24px;
+}

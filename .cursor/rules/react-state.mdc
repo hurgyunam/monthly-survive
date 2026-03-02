@@ -1,0 +1,33 @@
+---
+description: React setState updater는 순수 함수로 작성
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# React 상태 업데이트
+
+`setState`의 **updater 함수는 순수 함수**로 작성하세요. Side effect(로그, API 호출, 다른 setState 등)를 updater 안에 넣지 마세요.
+
+- React 18 배치 업데이트 / Strict Mode에서 updater가 여러 번 호출될 수 있음
+- Side effect는 `useEffect` 등 별도 훅에서 처리
+
+## 예시
+
+```tsx
+// ❌ BAD - updater 안에 side effect
+setCurrentDay((d) => {
+  const next = d + 1;
+  if (next <= 30) addLogForDay(next);
+  return next;
+});
+
+// ✅ GOOD - updater는 순수하게 새 값만 반환
+setCurrentDay((d) => d + 1);
+
+// Side effect는 useEffect로 분리
+useEffect(() => {
+  if (currentDay >= 2 && currentDay <= 30) {
+    addLogForDay(currentDay);
+  }
+}, [currentDay, ...]);
+```

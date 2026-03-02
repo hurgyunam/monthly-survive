@@ -1,0 +1,20 @@
+.result-card {
+  min-height: 120px;
+  padding: 24px;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+}
+
+.result-card__label {
+  font-size: var(--font-caption);
+  font-weight: var(--font-caption-weight);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.result-card__value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--success);
+  margin: var(--space-sm) 0 0;
+}

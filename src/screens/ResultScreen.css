@@ -1,0 +1,20 @@
+.result-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.result-title {
+  font-size: var(--font-title);
+  font-weight: var(--font-title-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.result-spacer {
+  flex-shrink: 0;
+}
+
+.result-spacer--flex {
+  flex: 1;
+}

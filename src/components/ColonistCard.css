@@ -1,0 +1,40 @@
+.colonist-card {
+  min-height: 100px;
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.colonist-card__avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--icon-rest) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
+.colonist-card__text {
+  flex: 1;
+}
+
+.colonist-card__name {
+  font-size: var(--font-section);
+  font-weight: var(--font-section-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.colonist-card__activity {
+  font-size: var(--font-body);
+  font-weight: var(--font-body-weight);
+  color: var(--text-secondary);
+  margin: var(--space-xs) 0 0;
+}

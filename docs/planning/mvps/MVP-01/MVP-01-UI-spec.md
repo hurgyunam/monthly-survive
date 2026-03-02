@@ -1,7 +1,8 @@
 # MVP-01 UI 상세 기획서
 
 > **목적:** AI/개발자가 이 문서만 보고 UI를 구현할 수 있을 정도로 구체화  
-> **플랫폼:** 모바일 퍼스트 (기준 해상도 390 x 844 pt, Safe Area 반영)
+> **플랫폼:** 모바일 퍼스트 (기준 해상도 390 x 844 pt, Safe Area 반영)  
+> **기획 결정:** `MVP-01-decisions.md` 참조
 
 ---
 
@@ -158,7 +159,7 @@ SetupScreen
 ```
 ┌─────────────────────────────────────┐
 │  [상단 바] H: 52pt                   │
-│  - Day N/30, 속도 조절 (선택)        │
+│  - Day N/30                         │
 ├─────────────────────────────────────┤
 │  [콜로니원 카드] H: ~100pt            │
 │  - 아바타 + 이름 + 현재 활동          │
@@ -175,13 +176,11 @@ SetupScreen
 ```
 SimulationScreen
 ├── SafeAreaContainer (padding: 20)
-│   ├── TopBar (height: 52, row, space-between, align: center)
-│   │   ├── DayIndicator
-│   │   │   └── Text: "Day {currentDay} / 30"
-│   │   │       - font: --font-section
-│   │   │       - color: --text-primary
-│   │   └── SpeedControl (선택 구현)
-│   │       └── SegmentedControl: "1x" | "2x" | "4x"
+│   ├── TopBar (height: 52, row, align: center)
+│   │   └── DayIndicator
+│   │       └── Text: "Day {currentDay} / 30"
+│   │           - font: --font-section
+│   │           - color: --text-primary
 │   │
 │   ├── Spacer (height: 24)
 │   │
@@ -207,7 +206,7 @@ SimulationScreen
 
 - 텍스트: `"Day {currentDay} / 30"`
 - `currentDay`: 1~30 정수
-- 실시간 갱신 (예: 1초당 1일 진행 시 1초마다 업데이트)
+- 실시간 갱신: 1일 ≈ 1초 (30일 = 30초). `MVP-01-decisions.md` 참조
 
 ### 2.2.4 ColonistCard
 

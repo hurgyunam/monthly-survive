@@ -11,9 +11,10 @@
 
 | 문서 | 경로 | 설명 |
 |:---|:---|:---|
+| **기획 결정 사항** | `../planning/mvps/MVP-01/MVP-01-decisions.md` | 플랫폼, 기술 스택, 30초/속도 조절 등 단일 출처 |
 | **UI 상세 스펙** | `../planning/mvps/MVP-01/MVP-01-UI-spec.md` | 디자인 토큰, 화면별 레이아웃, 컴포넌트 트리 |
 | **시뮬레이션 로직** | `../planning/mvps/MVP-01/MVP-01-first-cycle.md` | 30일 루프, 채집/건축/휴식 수치 공식 |
-| **TODO 목록** | `../planning/mvps/MVP-01/MVP-01-TODO.md` | 기획 결정 사항, 개발 작업 체크리스트 |
+| **TODO 목록** | `../planning/mvps/MVP-01/MVP-01-TODO.md` | 개발 작업 체크리스트 |
 
 ### 참조 시 유용한 문서
 

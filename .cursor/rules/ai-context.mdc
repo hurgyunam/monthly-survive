@@ -1,0 +1,11 @@
+---
+description: 개발 시 스펙 문서 참조 (docs/ai-context)
+alwaysApply: true
+---
+
+# 개발 컨텍스트
+
+기능/UI 구현 요청 시:
+
+1. `docs/ai-context/README.md`를 읽어 참조할 문서 목록 확인
+2. 해당 문서들(`docs/planning/` 경로)을 참고하여 구현

@@ -1,0 +1,120 @@
+.colonist-role-card {
+  min-height: 88px;
+  padding: 16px;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.colonist-role-card__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.colonist-role-card__avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--icon-craft) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.colonist-role-card__name {
+  font-size: var(--font-section);
+  font-weight: var(--font-section-weight);
+  color: var(--text-primary);
+}
+
+/* 림월드 스타일 우선순위 테이블 */
+.colonist-role-card__table-wrap {
+  overflow-x: auto;
+}
+
+.colonist-role-card__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-caption);
+  color: var(--text-primary);
+}
+
+.colonist-role-card__th,
+.colonist-role-card__td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.colonist-role-card__th--empty,
+.colonist-role-card__td--empty {
+  width: 0;
+  padding: 0;
+  border: none;
+}
+
+.colonist-role-card__th {
+  font-weight: var(--font-section-weight);
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.colonist-role-card__th .colonist-role-card__icon {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.colonist-role-card__th-label {
+  font-size: var(--font-caption);
+}
+
+.colonist-role-card__cell {
+  display: block;
+  width: 100%;
+  min-width: 36px;
+  min-height: 32px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: var(--font-body);
+  font-weight: var(--font-body-weight);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+.colonist-role-card__cell:hover {
+  background-color: var(--bg-card-selected);
+}
+
+.colonist-role-card__cell:active {
+  opacity: 0.9;
+}
+
+.colonist-role-card__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colonist-role-card__icon--gather { color: var(--icon-gather); }
+.colonist-role-card__icon--build { color: var(--icon-build); }
+.colonist-role-card__icon--craft { color: var(--icon-craft); }
+
+.colonist-role-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

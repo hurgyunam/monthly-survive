@@ -1,25 +1,33 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   SafeAreaContainer,
   PrimaryButton,
-  ActivityCard,
+  ColonistRoleCard,
 } from '../components';
 import { useGame } from '../context/GameContext';
-import { ActivityId } from '../types';
 import './SetupScreen.css';
 
 export function SetupScreen() {
   const navigate = useNavigate();
-  const { currentMonth, selectedActivity, setSelectedActivity, startMonth } = useGame();
+  const {
+    currentMonth,
+    colonists,
+    setColonistPriority,
+    startMonth,
+    initColonists,
+  } = useGame();
+
+  useEffect(() => {
+    if (colonists.length === 0) initColonists();
+  }, [colonists.length, initColonists]);
 
   const handleStart = () => {
-    if (selectedActivity) {
-      startMonth(selectedActivity);
+    if (colonists.length > 0) {
+      startMonth(colonists);
       navigate('/sim');
     }
   };
-
-  const activities: ActivityId[] = ['gather', 'build', 'rest'];
 
   return (
     <div className="app">
@@ -31,25 +39,27 @@ export function SetupScreen() {
         <div className="setup-spacer" style={{ height: 32 }} />
 
         <div className="question-block">
-          <p className="question-text">이번 달에 집중할 활동을 선택하세요</p>
+          <p className="question-text">각 콜로니원의 역할을 선택하세요</p>
         </div>
 
         <div className="setup-spacer" style={{ height: 16 }} />
 
-        <div className="activity-select-stack">
-          {activities.map((id) => (
-            <ActivityCard
-              key={id}
-              id={id}
-              selected={selectedActivity === id}
-              onSelect={() => setSelectedActivity(id)}
+        <div className="colonist-role-stack">
+          {colonists.map((colonist) => (
+            <ColonistRoleCard
+              key={colonist.id}
+              name={colonist.name}
+              priorities={colonist.priorities}
+              onPriorityChange={(activity, value) =>
+                setColonistPriority(colonist.id, activity, value)
+              }
             />
           ))}
         </div>
 
         <div className="setup-spacer setup-spacer--flex" />
 
-        <PrimaryButton disabled={!selectedActivity} onClick={handleStart}>
+        <PrimaryButton disabled={colonists.length === 0} onClick={handleStart}>
           이달 시작
         </PrimaryButton>
       </SafeAreaContainer>

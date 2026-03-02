@@ -5,7 +5,7 @@ import './ColonistCard.css';
 const ACTIVITY_LABELS: Record<ActivityId, string> = {
   gather: '채집 중...',
   build: '건축 중...',
-  rest: '휴식 중...',
+  craft: '제작 중...',
 };
 
 interface ColonistCardProps {
@@ -17,7 +17,7 @@ export function ColonistCard({ activity, name = '콜로니원' }: ColonistCardPr
   return (
     <div className="colonist-card">
       <div className="colonist-card__avatar">
-        <User size={28} strokeWidth={2} />
+        <User size={24} strokeWidth={2} />
       </div>
       <div className="colonist-card__text">
         <p className="colonist-card__name">{name}</p>

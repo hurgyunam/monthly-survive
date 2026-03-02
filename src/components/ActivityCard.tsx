@@ -1,5 +1,5 @@
 import { ActivityId } from '../types';
-import { Leaf, Hammer, BedDouble } from 'lucide-react';
+import { Leaf, Hammer, Wrench } from 'lucide-react';
 import './ActivityCard.css';
 
 const ACTIVITY_CONFIG: Record<
@@ -18,11 +18,11 @@ const ACTIVITY_CONFIG: Record<
     sublabel: '시설 건설에 집중',
     iconClass: 'activity-card__icon--build',
   },
-  rest: {
-    icon: <BedDouble size={28} />,
-    label: '휴식',
-    sublabel: '피로 회복에 집중',
-    iconClass: 'activity-card__icon--rest',
+  craft: {
+    icon: <Wrench size={28} />,
+    label: '제작',
+    sublabel: '도구·장비 제작에 집중',
+    iconClass: 'activity-card__icon--craft',
   },
 };
 

@@ -1,5 +1,5 @@
 .colonist-card {
-  min-height: 100px;
+  min-height: 80px;
   padding: var(--space-md);
   background-color: var(--bg-card);
   border-radius: var(--radius-md);
@@ -9,11 +9,11 @@
 }
 
 .colonist-card__avatar {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--icon-rest) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--icon-craft) 100%);
   display: flex;
   align-items: center;
   justify-content: center;

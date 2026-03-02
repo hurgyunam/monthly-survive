@@ -33,7 +33,7 @@
 
 .activity-card__icon--gather { color: var(--icon-gather); }
 .activity-card__icon--build { color: var(--icon-build); }
-.activity-card__icon--rest { color: var(--icon-rest); }
+.activity-card__icon--craft { color: var(--icon-craft); }
 
 .activity-card__text {
   flex: 1;

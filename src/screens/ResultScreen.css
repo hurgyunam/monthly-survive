@@ -18,3 +18,9 @@
 .result-spacer--flex {
   flex: 1;
 }
+
+.result-colonist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

@@ -28,6 +28,12 @@
   flex: 1;
 }
 
+.colonist-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .log-section {
   flex-shrink: 0;
 }

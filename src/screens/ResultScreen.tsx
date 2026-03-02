@@ -1,20 +1,16 @@
 import { useNavigate } from 'react-router-dom';
-import { SafeAreaContainer, PrimaryButton, ResultCard } from '../components';
+import { SafeAreaContainer, PrimaryButton, ResultColonistRow } from '../components';
 import { useGame } from '../context/GameContext';
-import { ActivityId } from '../types';
 import './ResultScreen.css';
 
 export function ResultScreen() {
   const navigate = useNavigate();
-  const { currentMonth, selectedActivity, resultValue, nextMonth } = useGame();
+  const { currentMonth, colonistResults, nextMonth } = useGame();
 
   const handleNextMonth = () => {
     nextMonth();
     navigate('/');
   };
-
-  const activity = (selectedActivity ?? 'gather') as ActivityId;
-  const value = resultValue ?? 0;
 
   return (
     <div className="app">
@@ -25,7 +21,15 @@ export function ResultScreen() {
 
         <div className="result-spacer" style={{ height: 32 }} />
 
-        <ResultCard activity={activity} value={value} />
+        <div className="result-colonist-list">
+          {(colonistResults ?? []).map((r) => (
+            <ResultColonistRow
+              key={r.colonistId}
+              name={r.name}
+              results={r.results}
+            />
+          ))}
+        </div>
 
         <div className="result-spacer result-spacer--flex" />
 

@@ -4,7 +4,7 @@ import './ResultCard.css';
 const ACTIVITY_LABELS: Record<ActivityId, string> = {
   gather: '채집 성과',
   build: '건축 성과',
-  rest: '휴식 성과',
+  craft: '제작 성과',
 };
 
 interface ResultCardProps {

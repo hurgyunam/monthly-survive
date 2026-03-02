@@ -31,8 +31,11 @@
 다음 MVP로 넘어가면 위 테이블을 갱신하세요.
 
 - MVP-02: `../planning/mvps/MVP-02/` (해당 시점에 생성된 문서 참조)
-- MVP-03: `../planning/mvps/MVP-03/`
-- MVP-04: `../planning/mvps/MVP-04/`
+- MVP-03: `../planning/mvps/MVP-03/` — 초반 지역 선택 (재해·약탈·자원 지역별 차이)
+- MVP-04: `../planning/mvps/MVP-04/` — 자원 도입 + 자원 채취 계획 UI
+- MVP-05: `../planning/mvps/MVP-05/` — 월간 리포트 + 다음 달 설정 연동
+- MVP-06: `../planning/mvps/MVP-06/` — 시설 건설 + 건설 계획 UI
+- MVP-07: `../planning/mvps/MVP-07/` — 시설 제작 + 제작 계획 UI
 
 ---
 

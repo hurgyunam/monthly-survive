@@ -31,4 +31,4 @@
 ## 📎 참조
 
 - 이 결정은 `MVP-01-TODO.md` 기획/결정 TODO에서 확정됨
-- 구현 시 `MVP-01-first-cycle.md`, `MVP-01-UI-spec.md`와 함께 참조
+- 구현 시 `README.md`, `MVP-01-UI-spec.md`와 함께 참조

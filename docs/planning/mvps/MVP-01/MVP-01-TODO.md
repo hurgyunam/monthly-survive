@@ -1,6 +1,6 @@
 # MVP-01: TODO
 
-> `MVP-01-first-cycle.md` 기반 · 기획 결정 → 개발 순서
+> `README.md` 기반 · 기획 결정 → 개발 순서
 
 ---
 
@@ -34,4 +34,4 @@
 
 ---
 
-*상세 스펙: `MVP-01-first-cycle.md`, `MVP-01-UI-spec.md`, 결정 사항: `MVP-01-decisions.md`*
+*상세 스펙: `README.md`, `MVP-01-UI-spec.md`, 결정 사항: `MVP-01-decisions.md`*
